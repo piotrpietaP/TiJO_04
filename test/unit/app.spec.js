@@ -122,6 +122,25 @@ describe('app', function () {
     });
 
 
+    describe('maxArray',function() {
+
+        it('should get a true value', function() {
+           expect(app.maxArray([1,2])).toEqual(2);
+        });
+
+        it('should get a Null value', function() {
+            expect(app.maxArray([])).toBeNull(true);
+        });
+        it('should get a false', function(){
+            expect(app.maxArray(['1', '5'])).toEqual(false); //a real problem in JavaSript vs other programming languages - 'a', 'b' ASCII var or Error X
+        });
+
+
+    });
+
+
+
+
 
 
 });
