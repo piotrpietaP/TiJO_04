@@ -2,7 +2,7 @@ describe('app', function () {
     'use strict';
     var app = window.app;
 
-    describe('Division function', function () {
+    xdescribe('Division function', function () {
         it('should divide number a by b', function () {
             expect(app.divide(10, 5)).toEqual(2);
             expect(app.divide(15, 3)).toEqual(5)
@@ -34,5 +34,94 @@ describe('app', function () {
         it('should return false when b is equal 0', function () {
             expect(app.divide(101, 0)).toEqual(false);
         });
+
+
     });
+
+    xdescribe('getDesc',function() {
+
+        it('should get numbers between two numbers, maybe', function() {
+            expect(app.getDescendingNumbers(3,1)).toEqual();
+        });
+
+        it('should get numbers ', function() {
+            expect(app.getDescendingNumbers(3,1)).toEqual(false);
+        });
+
+        it('should get numbers ', function() {
+            expect(app.getDescendingNumbers(3,1)).toEqual(false);
+        });
+
+        it('should get numbers ', function() {
+            expect(app.getDescendingNumbers(3,1)).toEqual('3 2 1');
+        });
+
+        it('should get numbers ', function() {
+            expect(app.getDescendingNumbers(5,1)).toEqual('5 4 3 2 1');
+        });
+
+        it('should get numbers ', function() {
+            expect(app.getDescendingNumbers(-2, 6)).toEqual(false);
+        });
+
+        it('should\'t get a number', function(){
+           expect(app.getDescendingNumbers('aaaaaa', 3)).toEqual(false);
+        });
+
+        it('should\'t get a number', function(){
+            expect(app.getDescendingNumbers(8, '+')).toEqual(false);
+        });
+
+        it('should get numbers ', function() {
+            expect(app.getDescendingNumbers(0, -1)).toEqual('0 -1');
+        });
+
+
+    });
+
+    describe(' areaOfTrapezoid',function() {
+
+        xit('should get false', function() {
+            expect(app. areaOfTrapezoid(-1, -1, 4)).toEqual(false);
+        });
+
+        xit('should get a number', function(){
+            expect(app.areaOfTrapezoid(10,10,20)).toEqual(200);
+        });
+
+        xit('should\'t get a number', function(){
+            expect(app.areaOfTrapezoid('adasdasd', '1', '54')).toEqual(false);
+        });
+
+        xit('should get a false value', function(){
+            expect(app.areaOfTrapezoid(-1, -1, -1)).toEqual(false);
+        });
+
+        xit('should get a false value', function(){
+            expect(app.areaOfTrapezoid(-1, -1, 1)).toEqual(false);
+        });
+
+        xit('should get a false value', function(){
+            expect(app.areaOfTrapezoid(-1, 1, 1)).toEqual(false);
+        });
+
+        xit('should get a false value', function(){
+            expect(app.areaOfTrapezoid('a', 10, 10)).toEqual(false);
+        });
+
+        xit('should get a false value', function(){
+            expect(app.areaOfTrapezoid('a', "aa", 1)).toEqual(false);
+        });
+
+        it('should get a false value', function(){
+            expect(app.areaOfTrapezoid('a', "aabbbbbccc", "aassc")).toEqual(false);
+        });
+
+
+
+    });
+
+
+
+
 });
